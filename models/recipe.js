@@ -1,6 +1,23 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const ingredientSchema = new Schema({
+  ingredientName: {
+    type: String,
+    required: true,
+  },
+  wholeValue: {
+    type: String,
+  },
+  fractionValue: {
+    type: String,
+  },
+  unit: {
+    type: String,
+    required: true,
+  },
+});
+
 const recipeSchema = new Schema(
   {
     name: {
@@ -32,28 +49,13 @@ const recipeSchema = new Schema(
       type: String,
       required: true,
     },
+    ingredients: [ingredientSchema],
+    directions: [String],
   },
   {
     timestamps: true,
   }
 );
-
-const ingredientSchema = new Schema({
-  ingredientName: {
-    type: String,
-    required: true,
-  },
-  wholeValue: {
-    type: String,
-  },
-  fractionValue: {
-    type: String,
-  },
-  unit: {
-    type: String,
-    required: true,
-  },
-});
 
 const Recipe = mongoose.model("Recipe", recipeSchema);
 

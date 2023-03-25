@@ -1,9 +1,7 @@
-# mealplanner_RN_2022_Server
+# Meal Planner Server - 2022
 
 I am in the process of building a meal planner mobile app with React Native. 
 I created this Rest API server to respond to requests from the front end app. 
-
-
 
 Mongoose Methods used: find, create, deleteMany, findById, findByIdAndUpdate, findByIdAndDelete
 
@@ -23,4 +21,8 @@ Mongoose Methods used: find, create, deleteMany, findById, findByIdAndUpdate, fi
 
 
 ## Technology: 
-* Express: 
+* Express: The Node.js application framework is used. I used it to scaffold out the app
+* Mongoose: 
+ * Connect method: Used to connect the server to the MongoDB server. It is wrapper around the MongoDB Node driver connect method. 
+ * Provides many methods on the model to alter data in the MongoDB server. 
+* Morghan: 

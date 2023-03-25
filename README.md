@@ -1,7 +1,7 @@
 # Meal Planner Server - 2022
 
 I am in the process of building a meal planner mobile app with React Native. 
-I created this Rest API server to respond to front-end app requests.  
+I created this Rest API server to respond to front-end app requests.  [View the repository here](https://github.com/madisonisfan/mealplanner-RN-2022)
 
 Mongoose Methods used: find, create, deleteMany, findById, findByIdAndUpdate, findByIdAndDelete
 

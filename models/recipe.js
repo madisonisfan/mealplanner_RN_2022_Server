@@ -22,7 +22,7 @@ const recipeSchema = new Schema(
     name: {
       type: String,
       required: true,
-      //unique: true,
+      unique: true,
     },
     description: {
       type: String,
@@ -49,7 +49,7 @@ const recipeSchema = new Schema(
       //required: true,
     },
     //ingredients: [ingredientSchema],
-    inredients: [String],
+    ingredients: [String],
     directions: [String],
   },
   {

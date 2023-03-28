@@ -15,14 +15,19 @@ recipeRouter
   })
   .post((req, res, next) => {
     //through this create method, mogoose will automaticlaly handle checking that data to make sure it fits the schema that we define
+
     Recipe.create(req.body) //the express.json() middlware will already have parsed it, into a format we can work with.
+
       .then((recipe) => {
         console.log(`recipe created`, recipe);
         res.statusCode = 200;
         res.setHeader("Content-Type", "application/json");
         res.json(recipe);
       })
-      .catch((err) => next(err));
+      .catch((err) => {
+        console.log(`error`, err);
+        next(err);
+      });
   })
   .put((req, res) => {
     res.statusCode = 403;

@@ -14,7 +14,6 @@ const ingredientSchema = new Schema({
   },
   unit: {
     type: String,
-    required: true,
   },
 });
 
@@ -23,7 +22,7 @@ const recipeSchema = new Schema(
     name: {
       type: String,
       required: true,
-      unique: true,
+      //unique: true,
     },
     description: {
       type: String,
@@ -47,9 +46,10 @@ const recipeSchema = new Schema(
     },
     image: {
       type: String,
-      required: true,
+      //required: true,
     },
-    ingredients: [ingredientSchema],
+    //ingredients: [ingredientSchema],
+    inredients: [String],
     directions: [String],
   },
   {
